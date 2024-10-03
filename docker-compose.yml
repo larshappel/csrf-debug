@@ -1,0 +1,12 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: csrf-debug
+        container_name: csrf-debug
+        restart: unless-stopped
+        tty: true
+        working_dir: /var/www
+        ports:
+            - "8080:8080"
